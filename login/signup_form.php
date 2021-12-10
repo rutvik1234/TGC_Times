@@ -1,7 +1,11 @@
+<?php
+session_start();
+include "signup.php";
+?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Animated Login Form</title>
+	<title>SignUp Form</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
@@ -15,7 +19,7 @@
 			<img src="../img/bg2.svg">
 		</div>
 		<div class="login-content">
-			<form action="index.html">
+			<form action="signup_form.php" method="POST">
 				<img src="../img/avatar.svg">
 				<h2 class="title">Sign Up</h2>
            		<div class="input-div one">
@@ -24,7 +28,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5>Username</h5>
-           		   		<input type="text" class="input">
+           		   		<input type="text" class="input" name="username">
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -33,7 +37,7 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Password</h5>
-           		    	<input type="password" class="input">
+           		    	<input type="password" class="input" name="password">
             	   </div>
             	</div>
                 <div class="input-div pass">
@@ -42,11 +46,11 @@
                     </div>
                     <div class="div">
                          <h5>Re-Type Password</h5>
-                         <input type="password" class="input">
+                         <input type="password" class="input" name="repassword">
                  </div>
               </div>
-				<a href="login.html">Already Have An Account? Log In</a>
-            	<input type="submit" class="btn" value="Login">
+				<a href="login_form.php">Already Have An Account? Log In</a>
+            	<input type="submit" class="btn" value="submit" name="submit">
             </form>
         </div>
     </div>

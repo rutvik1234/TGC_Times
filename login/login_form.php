@@ -1,13 +1,20 @@
+
+<?php
+session_start();
+include 'login.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Animated Login Form</title>
+	<title>Login Form</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+
 	<img src="../img/logo1.png" alt="Logo" class="logoimg">
 	<img class="wave" src="../img/wave.png">
 	<div class="container">
@@ -15,7 +22,7 @@
 			<img src="../img/bg.svg">
 		</div>
 		<div class="login-content">
-			<form action="index.html">
+			<form method="POST" action="login_form.php">
 				<img src="../img/avatar.svg">
 				<h2 class="title">Login</h2>
            		<div class="input-div one">
@@ -24,7 +31,7 @@
            		   </div>
            		   <div class="div">
            		   		<h5>Username</h5>
-           		   		<input type="text" class="input">
+           		   		<input type="text" class="input" name="username">
            		   </div>
            		</div>
            		<div class="input-div pass">
@@ -33,12 +40,12 @@
            		   </div>
            		   <div class="div">
            		    	<h5>Password</h5>
-           		    	<input type="password" class="input">
+           		    	<input type="password" class="input" name="password">
             	   </div>
             	</div>
             	<a href="#">Forgot Password?</a>
-				<a href="signup.html">No Account? Sign Up</a>
-            	<input type="submit" class="btn" value="Login">
+				<a href="signup_form.php">No Account? Sign Up</a>
+            	<input type="submit" class="btn" value="Login" name="submit">
             </form>
         </div>
     </div>
